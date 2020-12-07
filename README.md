@@ -34,3 +34,26 @@ You can now from a Python interpreter:
 >>> adder.add(2, 3)
 5
 ```
+
+## pyo3_inherit
+
+Enter the `pyo3_inherit` directory. You build as above in the basic example:
+
+```
+python3 setup.py develop
+```
+
+You can access methods on either the parent (`feed()`) or child (`roar()`):
+
+```py
+>>> doris = zoo.Lion('Doris', 2, 0, 'human')
+>>> doris.name
+'Doris'
+>>> doris.age
+2
+>>> doris.feed()
+>>> doris.roar()
+'ROAR!!!!'
+>>> doris.favorite_meat
+'human'
+```
