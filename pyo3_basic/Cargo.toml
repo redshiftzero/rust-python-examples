@@ -1,0 +1,11 @@
+[package]
+name = "adder"
+version = "0.1.0"
+authors = ["redshiftzero <jen@freedom.press>"]
+edition = "2018"
+
+[dependencies]
+pyo3 = { version = "0.12.4", features = ["extension-module"] }
+
+[lib]
+crate-type = ["cdylib"]

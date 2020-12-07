@@ -15,3 +15,22 @@ cargo build --release
 
 Now, check the path `location` in `add.py` is correctly pointing to the location of your built library. If so, you can run `python3 add.py`. If you have no assertion error, you are successfully calling Rust code from Python.
 
+## pyo3_basic
+
+Enter the `pyo3_basic` directory. Install the requirements (we're using `setuptools-rust` for packaging).
+
+Next:
+
+```
+python3 setup.py develop
+```
+
+This will call out to `rustc` to compile the extension. It'll also install the resulting Python module into your virtualenv.
+
+You can now from a Python interpreter:
+
+```py
+>>> import adder
+>>> adder.add(2, 3)
+5
+```
